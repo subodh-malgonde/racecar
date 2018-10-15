@@ -1,6 +1,6 @@
 
 # erpm (electrical rpm) = speed_to_erpm_gain * speed (meters / second) + speed_to_erpm_offset
-speed_to_erpm_gain: 7200
+speed_to_erpm_gain: 1900
 
 # The state here is the VESC state reported on the topic /vesc/sensors/core. On echoing messages
 # from this topic I realized that the state.speed is reported to be in the range of 37 to 140, for
