@@ -1,7 +1,12 @@
 
 # erpm (electrical rpm) = speed_to_erpm_gain * speed (meters / second) + speed_to_erpm_offset
 speed_to_erpm_gain: 7200
-speed_to_erpm_offset: 0.0
+
+# The state here is the VESC state reported on the topic /vesc/sensors/core. On echoing messages
+# from this topic I realized that the state.speed is reported to be in the range of 37 to 140, for
+# a stationary car. So I should probably set the value for speed_to_erpm_offset_ as
+# (37+140)/2 = ~90
+speed_to_erpm_offset: 90.0
 
 tachometer_ticks_to_meters_gain: 0.00225
 # servo smoother - limits rotation speed and smooths anything above limit
