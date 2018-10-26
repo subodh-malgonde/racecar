@@ -40,4 +40,6 @@ vesc_driver:
   position_min: 0.0
   position_max: 0.0
   servo_min: 0.15
-  servo_max: 0.85
+  # substitue values in the above equation for servo value to get min/max
+  # The following values are for math.radians(21.8) i.e. +/- 21.8 degrees
+  servo_max: 0.91
